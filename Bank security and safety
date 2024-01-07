@@ -14,3 +14,18 @@ It is between the customer and the bank only and cannot be shared with others
     </form>
 </body>
 </html>
+Allow the one-time password to be resent only three times via text messages
+function usePassword() {
+    // Get the password from the form
+    var password = document.getElementById('password').value;
+
+    // Create a new instance of the SHA-256 hash algorithm
+    var hasher = new jsSHA("SHA-256", "TEXT");
+
+    // Hash the password and convert it to a hexadecimal string
+    hasher.update(password);
+    var hashedPassword = hasher.getHash("HEX");
+
+    // Display the hashed password to the user
+    alert('Hashed password: ' + hashedPassword);
+}
