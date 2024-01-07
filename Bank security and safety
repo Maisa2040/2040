@@ -1,1 +1,16 @@
 Determine the requirements for change in the system
+OTB One-time password encryption lasts only 10 seconds
+It is between the customer and the bank only and cannot be shared with others
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+</head>
+<body>
+    <form id="encrypt-form">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <button type="button" onclick="encryptPassword()">Encrypt</button>
+    </form>
+</body>
+</html>
